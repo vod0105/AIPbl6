@@ -1,0 +1,7 @@
+.\myenv\Scripts\activate
+$env:PATH += ";C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin"
+python -m flask --app myflask.main run
+
+az login
+pip freeze > requirements.txt
+git push azure master
