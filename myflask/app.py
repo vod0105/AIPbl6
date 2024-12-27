@@ -81,11 +81,12 @@ def connect_db():
     global db_connection
     if db_connection is None or not db_connection.is_connected():
         db_connection = mysql.connector.connect(
-            host="localhost",
-            port=3307,
-            user="Duc",
-            password="12345",
-            database="web_thuc_an"
+            host="dbpbl.mysql.database.azure.com",
+            port=3306,
+            user="adminn",
+            password="Root123456789",
+            database="db_pbl6",
+            ssl_disabled=False
         )
     return db_connection
 
@@ -125,7 +126,7 @@ def predict_ratings_vectorized(user, user_product_matrix, similarity_matrix):
 def crossSell(userId):
     user_predict = userId
     print(userId)
-    with open('myflask/user_product_matrix.pkl', 'rb') as f:
+    with open('myflask/user_product_matrix.pkl', 'rb') as f:    
         user_product_matrix = pickle.load(f)
     with open('myflask/similarity_matrix.pkl', 'rb') as f:
         similarity_matrix = pickle.load(f)
