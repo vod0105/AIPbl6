@@ -4,8 +4,8 @@ import os
 import numpy as np
 import base64
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Flatten
+# from tensorflow.keras.models import Sequential
+# from tensorflow.keras.layers import Dense, Flatten
 import pandas as pd
 import requests
 from flask_cors import CORS 
