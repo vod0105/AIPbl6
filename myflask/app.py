@@ -1,32 +1,20 @@
-from flask import Flask, request, render_template, redirect, url_for, jsonify 
+from flask import Flask, request, jsonify 
 import os
-# import cv2
+import cv2
 import numpy as np
 import base64
 import tensorflow as tf
-# from tensorflow.keras.models import Sequential
-# from tensorflow.keras.layers import Dense, Flatten
-import pandas as pd
-import requests
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Flatten
 from flask_cors import CORS 
-from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import StandardScaler
 import numpy as np
 import tensorflow as tf
 import mysql.connector
 import joblib
-import re
-from datetime import datetime
 import torch.nn.functional as F
 import torch
-from torch.utils.data import Dataset, DataLoader
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, AdamW
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-import pandas as pd
-from sklearn.metrics.pairwise import cosine_similarity
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import numpy as np
-import csv
 import pickle
 from azure.storage.blob import BlobServiceClient
 
