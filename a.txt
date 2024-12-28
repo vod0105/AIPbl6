@@ -1,7 +1,8 @@
 .\myenv\Scripts\activate
 $env:PATH += ";C:\Program Files\Microsoft SDKs\Azure\CLI2\wbin"
-python -m flask --app myflask.main run
+python -m flask --app myflask.app run
 
 az login
 pip freeze > requirements.txt
 git push azure master
+az webapp up --name aiflask --resource-group ai --runtime "PYTHON:3.8"

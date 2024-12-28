@@ -283,8 +283,9 @@ def download_blob(blob_name, download_path):
         print(f"Đã tải xuống {blob_name} từ Azure Blob Storage.")
 
 # Tải mô hình và Label Encoder từ Azure Blob Storage
-download_blob("phobert_intent_classification.pth", "phobert_intent_classification.pth")
 download_blob("label_encoder.pkl", "label_encoder.pkl")
+download_blob("phobert_intent_classification.pth", "phobert_intent_classification.pth")
+
 # Load trạng thái của mô hình đã huấn luyện
 model.load_state_dict(torch.load("phobert_intent_classification.pth", map_location=device))
 model.to(device)
